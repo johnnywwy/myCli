@@ -28,5 +28,6 @@ export default defineConfig([
       commonjs(),
       terser(),
     ],
+    external: ["tslib"], // 👈 确保 tslib 是 external
   },
 ]);
