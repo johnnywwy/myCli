@@ -1,14 +1,22 @@
 {
-  "name": "my-cli",
-  "version": "1.0.0",
-  "description": "",
+  "name": "wwy-cli",
+  "version": "0.0.1",
+  "description": "wy-cli 脚手架工具",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rollup -c rollup.config.js --bundleConfigAsCjs"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["Vite","Vue3","Typescript"],
+  "bin": {
+    "wwy": "bin/index.js"
+  },
+  "files": [
+    "dist",
+    "bin",
+    "README.md"
+  ],
+  "author": "wwy",
   "license": "ISC",
   "packageManager": "pnpm@10.5.2",
   "devDependencies": {
