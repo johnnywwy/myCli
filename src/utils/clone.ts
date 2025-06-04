@@ -22,10 +22,22 @@ export const clone = async (url: string, projectName: string, options: string[])
   try {
     // 开始下载代码并展示预估时间进度条
     await logger(git.clone(url, projectName, options), '代码下载中: ', {
-      estimate: 8000 // 展示预估时间
+      estimate: 10 // 展示预估时间
     })
-    console.log('')
-  } catch (error) {
+    console.log()
+    console.log(chalk.blueBright(`===================================`))
+    console.log(chalk.blueBright(`====== 欢迎使用 my-cli 脚手架 ======`))
+    console.log(chalk.blueBright(`===================================`))
+    console.log()
 
+
+    console.info(`项目创建成功 ${chalk.blueBright(projectName)}`)
+    console.info(`执行以下命令启动项目：`)
+    console.info(`cd ${chalk.blueBright(projectName)}`)
+    console.info(`${chalk.yellow('pnpm')} install`)
+    console.info(`${chalk.yellow('pnpm')} run dev`)
+  } catch (error) {
+    console.error("下载失败")
+    console.error(String(error))
   }
 }
